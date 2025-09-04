@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gerador de CSS (layout estático)</title>
+    <link rel="stylesheet" href="estilo.css"/>
+
+</head>
+
+<body>
+    
+    <main class="wrap">
+    <section class="col esquerda">
+
+        <h1>Configurar borda</h1>
+
+        <form class="painel" aria-label="Configurar borda">
+
+            <div class="grupo">
+
+                <label for="cor">Cor da borda</label>
+                <select id="cor" name="cor">
+
+                    <option value="black">Preto</option>
+                    <option value="red">Vermelho</option>
+                    <option value="blue">Azul</option>
+                    <option value="green">Verde</option>
+                    <option value="purple">Roxo</option>
+
+                </select>
+
+            </div>
+
+            <fieldset class="grupo">
+
+                <legend>Cantos</legend>
+                <label class="radio">
+
+                    <input type="radio" name="cantos" value="arredondados" />
+                    Arredondadas
+
+                </label>
+
+                <label class="radio">
+
+                    <input type="radio" name="cantos" value="retos" checked />
+                    Retas
+
+                </label>
+
+            </fieldset>
+
+            <div class="grupo">
+
+                <label for="estilo">Estilo da borda</label>
+                <select id="estilo" name="estilo">
+
+                    <option value="solid">solid</option>
+                    <option value="dashed">dashed</option>
+                    <option value="dotted">dotted</option>
+                    <option value="double">double</option>
+                    <option value="groove">groove</option>
+                    <option value="ridge">ridge</option>
+                    <option value="inset">inset</option>
+                    <option value="outset">outset</option>
+
+                </select>
+
+            </div>
+
+            <div class="grupo duas-colunas">
+
+                <div>
+
+                    <label for="largura">Largura (px)</label>
+                    <input
+                            type="number"
+                            id="largura"
+                            name="largura"
+                            min="0"
+                            placeholder="ex.: 300"
+                    />
+
+                </div>
+
+                <div>
+
+                    <label for="altura">Altura (px)</label>
+                    <input
+                            type="number"
+                            id="altura"
+                            name="altura"
+                            min="0"
+                            placeholder="ex.: 200"
+                    />
+
+                </div>
+
+            </div>
+
+            <button type="button" class="btn">Gerar CSS</button>
+
+        </form>
+
+    </section>
+
+    <section class="col direita">
+
+        <h2>CSS Gerado</h2>
+        <textarea
+                class="saida"
+                aria-label="CSS gerado"
+                spellcheck="false"
+                placeholder="/* O CSS aparecerá aqui quando você implementar o script. */"
+        ></textarea>
+
+    </section>
+
+</main>
+
+<script src="geradorCss.js"></script>
+
+</body>
+
+</html>
